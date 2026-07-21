@@ -31,7 +31,7 @@
       </p>
       <button id="getReadoBtn" class="btn-primary">Get Reado</button>
       <div id="downloadModal" class="message-box hidden">
-        <p> Thanks for choosing Reado! Connecting you now...</p>
+        <p>Thanks for choosing Reado! Connecting you now...</p>
       </div>
     </section>
 
@@ -61,14 +61,15 @@
       <form id="contactForm" class="contact-form" novalidate>
         <input type="text" id="userName" placeholder="Your Name" required>
         
-        <!-- Strict Email Input -->
+        <!-- Solid Email Format Regex Pattern -->
         <input 
           type="email" 
           id="userEmail" 
-          placeholder="Your Email (e.g., name@example.com)" 
+          placeholder="Your Email (name@domain.com)" 
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
           required
         >
-        <p id="emailError" class="error-text hidden">Please enter a valid email address (e.g., name@domain.com).</p>
+        <p id="emailError" class="error-text hidden">Please enter a valid format: user@domain.com</p>
 
         <textarea rows="4" placeholder="How can we help you?" required></textarea>
         <button type="submit" class="btn-primary">Send Message</button>

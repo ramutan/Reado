@@ -40,13 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Email format validation helper function
-  function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+  // Strict email format checker function
+  function isStrictEmailFormat(email) {
+    // Requires: username + '@' + domain name + '.' + top-level-domain (min 2 chars)
+    const strictEmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return strictEmailRegex.test(email);
   }
 
-  // Contact form handler with strict email check
+  // Contact form handler with strict format validation
   const contactForm = document.getElementById('contactForm');
   const userEmail = document.getElementById('userEmail');
   const emailError = document.getElementById('emailError');
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (contactForm) {
     
-    // Clear error style as user types
+    // Clear error UI when typing
     userEmail.addEventListener('input', () => {
       userEmail.classList.remove('invalid-field');
       emailError.classList.add('hidden');
@@ -65,14 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const emailValue = userEmail.value.trim();
 
-      // Check if email follows standard format (user@domain.extension)
-      if (!isValidEmail(emailValue)) {
+      // Enforce strict email formatting
+      if (!isStrictEmailFormat(emailValue)) {
         userEmail.classList.add('invalid-field');
         emailError.classList.remove('hidden');
-        return; // Prevent submission
+        return; // Block submission until properly formatted
       }
 
-      // Successful submission
+      // Format is valid -> proceed with success state
       userEmail.classList.remove('invalid-field');
       emailError.classList.add('hidden');
       contactSuccess.classList.remove('hidden');
