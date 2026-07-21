@@ -35,3 +35,58 @@ body {
     border-radius: 12px;
     max-width: 260%;
 }
+
+/* Description text styling */
+.description {
+    font-size: 0.95rem;
+    color: #1a2b4c;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Button styling */
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    transform: translateY(0);
+}
+
+/* Dynamic message box styling */
+.message-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.hidden {
+    display: none;
+}
+
