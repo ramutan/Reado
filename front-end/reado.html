@@ -31,7 +31,7 @@
       </p>
       <button id="getReadoBtn" class="btn-primary">Get Reado</button>
       <div id="downloadModal" class="message-box hidden">
-        <p>🎉 Thanks for choosing Reado! Connecting you now...</p>
+        <p> Thanks for choosing Reado! Connecting you now...</p>
       </div>
     </section>
 
@@ -58,14 +58,24 @@
       <h2>Get in Touch</h2>
       <p class="section-text">Have questions, feedback, or need support with a ride? Drop us a message!</p>
       
-      <form id="contactForm" class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
+      <form id="contactForm" class="contact-form" novalidate>
+        <input type="text" id="userName" placeholder="Your Name" required>
+        
+        <!-- Strict Email Input -->
+        <input 
+          type="email" 
+          id="userEmail" 
+          placeholder="Your Email (e.g., name@example.com)" 
+          required
+        >
+        <p id="emailError" class="error-text hidden">Please enter a valid email address (e.g., name@domain.com).</p>
+
         <textarea rows="4" placeholder="How can we help you?" required></textarea>
         <button type="submit" class="btn-primary">Send Message</button>
       </form>
+
       <div id="contactSuccess" class="message-box hidden">
-        <p>✅ Message sent! We'll get back to you shortly.</p>
+        <p> Message sent! We'll get back to you shortly.</p>
       </div>
     </section>
 

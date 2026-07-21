@@ -65,11 +65,6 @@ body {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
-/* Page Section Visibility */
-.page-section.hidden {
-  display: none;
-}
-
 /* Home Section Layout */
 .logo-container img {
   max-width: 260px;
@@ -133,6 +128,19 @@ body {
   border-color: #1040a3;
 }
 
+/* Invalid field style */
+.contact-form input.invalid-field {
+  border-color: #d93025;
+  background-color: #fff8f8;
+}
+
+.error-text {
+  color: #d93025;
+  font-size: 0.8rem;
+  text-align: left;
+  margin-top: -6px;
+}
+
 /* Primary Button Styling */
 .btn-primary {
   background-color: #1040a3;
@@ -172,4 +180,10 @@ body {
   font-size: 0.9rem;
   font-weight: 600;
   border: 1px solid #c2d9ff;
-}   
+}
+
+/* Guaranteed concealment */
+.hidden,
+.page-section.hidden {
+  display: none !important;
+}
