@@ -1,2 +1,2 @@
 # Reado
-Your ride's best friend
+Reado is an all-in-one ride-hailing and delivery platform built to be as dependable as a loyal companion. Designed for speed, safety, and everyday convenience, Reado connects you with trusted local drivers and riders whether you need a quick bike ride through traffic, a comfortable car trip, or a fast parcel delivery. True to its name and always ready to move, Reado brings together real-time reliability with a friendly, customer-first approach, making it your ride’s best friend wherever you go.
